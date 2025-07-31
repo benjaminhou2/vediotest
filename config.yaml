@@ -1,0 +1,35 @@
+# 视频相似度分析系统配置文件
+
+# 基础参数设置
+processing:
+  frame_interval: 1          # 每秒抽取帧数
+  hash_size: 8              # pHash尺寸
+  cnn_image_size: [224, 224] # CNN输入图像尺寸
+  max_workers: 4            # 多线程工作者数量
+  chunk_size: 10            # 批处理块大小
+
+# 相似度阈值设置
+thresholds:
+  phash_threshold: 15       # pHash距离阈值 (越小越相似)
+  cnn_threshold: 0.3        # CNN余弦距离阈值 (越小越相似)
+  audio_threshold: 0.4      # 音频差异阈值 (越小越相似)
+  overall_threshold: 0.6    # 综合相似度阈值
+
+# 文件处理设置
+files:
+  supported_formats: ['.mp4', '.avi', '.mov', '.mkv', '.wmv', '.flv']
+  temp_dir: './temp'        # 临时文件目录
+  output_dir: './reports'   # 报告输出目录
+  max_file_size_mb: 500     # 最大文件大小限制(MB)
+
+# GUI设置
+gui:
+  window_width: 800
+  window_height: 600
+  theme: 'modern'
+  
+# 报告设置
+reports:
+  generate_detailed: true   # 生成详细报告
+  include_thumbnails: true  # 包含缩略图
+  save_comparison_frames: false # 保存对比帧

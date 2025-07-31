@@ -1,0 +1,28 @@
+# 视频相似度分析系统依赖包
+
+# 核心依赖
+opencv-python>=4.5.0
+numpy>=1.21.0
+Pillow>=8.0.0
+imagehash>=4.3.0
+
+# 视频/音频处理
+moviepy>=1.0.3
+pydub>=0.25.0
+
+# 机器学习
+tensorflow>=2.8.0
+scipy>=1.7.0
+
+# 配置管理
+PyYAML>=6.0
+
+# 系统监控
+psutil>=5.8.0
+
+# GUI (可选)
+# tkinter (通常随Python自带)
+
+# 开发工具 (可选)
+# jupyter>=1.0.0  # 用于数据分析
+# matplotlib>=3.5.0  # 用于可视化
